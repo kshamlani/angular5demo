@@ -1,0 +1,15 @@
+<div class="row">
+   <div class="col s3 offset-s1">
+    <form>
+       <input id="text" type="text" name="item" placeholder="Add new Item" [(ngModel)]="demoText">
+        <input class="btn waves-effect waves-light" type="submit" (click)="addItem()">
+    </form>
+  </div>
+  <div class="col s5 offset-s1">
+    <ul class="collection with-header">
+      <li class="collection-header"><span class="title"><b>Collections</b></span>
+      <a href="#!" class="secondary-content">{{ itemCount }}</a> </li>
+      <li class="collection-item" *ngFor="let collection of collections; let i = index"><div>{{ collection }}<a href="#!" class="secondary-content" (click)="removeItem(i)"><i class="material-icons">delete</i></a></div></li>
+    </ul>
+  </div>
+</div>
